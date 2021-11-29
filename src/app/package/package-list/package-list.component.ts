@@ -18,17 +18,24 @@ export class PackageListComponent implements OnInit {
 
   ngOnInit():void {
     const params = this.activatedRoute.snapshot.params;
-    if(params){
+    if(params['id'] != undefined){
+      console.log("entre");
+      
       this.packageService.getPackagesByProduct(params['id']).subscribe(
         res => {
           this.packages = res;
         }      
       );
+    }else{
+    this.getPackages();
     }
   }
 
-  getPackagesByProduct(){
-
+  getPackages(){     
+    this.packageService.getPackages().subscribe(
+      res => this.packages = res,
+      err => console.log(err)        
+    );
   }
 
 }

@@ -12,6 +12,10 @@ export class PackageService {
 
   constructor(private readonly httpClient: HttpClient) {}
 
+  getPackages():Observable<IPackage[]>{
+    return this.httpClient.get<IPackage[]>(`${this.API_URL}/package`);
+  }
+
   getPackagesByProduct(productId: number):Observable<IPackage[]>{
     return this.httpClient.get<IPackage[]>(`${this.API_URL}/package/by-product/${productId}`);
   }
