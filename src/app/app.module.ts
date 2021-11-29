@@ -8,6 +8,10 @@ import { ProductFormComponent } from './product/product-form/product-form.compon
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './shared/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PackageListComponent } from './package/package-list/package-list.component';
+import { PackageFormComponent } from './package/package-form/package-form.component';
+import { CustomerListComponent } from './customer/customer-list/customer-list.component';
+import { CustomerFormComponent } from './customer/customer-form/customer-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { HttpClientModule } from '@angular/common/http';
     ProductListComponent,
     ProductFormComponent,
     NavbarComponent,
-    HomeComponent
+    HomeComponent,
+    PackageListComponent,
+    PackageFormComponent,
+    CustomerListComponent,
+    CustomerFormComponent
   ],
   imports: [
     BrowserModule,

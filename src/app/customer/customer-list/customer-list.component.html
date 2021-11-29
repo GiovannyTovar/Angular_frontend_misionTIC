@@ -1,0 +1,27 @@
+<br/><br/><div class="row justify-content-center">
+    <strong><h1 style="text-align:center">CLIENTES</h1></strong>
+</div><br/>
+<div class="container"><br/>
+    <div class="row justify-content-center">
+    <br/><div class="row">
+        <br/><table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of customerList">
+                <th>{{item.customer_id}}</th>
+                <td>{{item.customer_dni}}</td>
+                <td>{{item.customer_name}}</td>
+                <td>{{item.customer_phone}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>

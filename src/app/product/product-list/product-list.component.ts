@@ -25,4 +25,12 @@ export class ProductListComponent implements OnInit {
     );
   }
 
+  getProductsById(product_id: number){
+    this.productService.getProductById(product_id).subscribe(
+      res => console.log(res),
+      err => console.log(err)
+      
+    )
+  }
+
 }

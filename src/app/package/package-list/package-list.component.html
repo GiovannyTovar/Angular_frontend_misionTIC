@@ -1,16 +1,15 @@
-<br>
 <div class="container">
+    <br>
+    <h4>Paquetes disponibles:</h4><br>
     <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col" *ngFor="let item of productList">
+        <div class="col" *ngFor="let item of packages">
 
             <div class="card m-2 border shadow mt-2 h-100" style="width: 18rem; border-radius: 15px;">
                 <div class="card-header">
-                    <span class="badge rounded-pill bg-purple">{{item.product_id}}</span> {{item.product_name}}
+                    <span class="badge rounded-pill bg-purple">{{item.package_id}}</span> {{item.package_name}}
                 </div>
                 <div class="card-body">
-                    <img src="{{item.product_photoURL}}" width="90px" height="180px" class="card-img-top" alt="...">
-                    <br /> <br>
-                    {{item.product_description}} <br />
+                    {{item.package_description}} <br />
                 </div>
                 <div class="card-footer">
                     <a class="btn btn-dark" [routerLink]="['/product/packages/', item.product_id!]" routerLinkActive="router-link-active" >Cotizar</a>
